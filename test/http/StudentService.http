@@ -1,0 +1,44 @@
+@server=http://localhost:44351
+@username=alice
+@password=
+
+
+### Students
+# @name Students_GET
+GET {{server}}/odata/v4/student/Students
+Authorization: Basic {{username}}:{{password}}
+
+
+### Students
+# @name Students_POST
+POST {{server}}/odata/v4/student/Students
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "StudentID": 29243547,
+  "Name": " ",
+  "Course": " ",
+  "Score": 91
+}
+
+
+### Students
+# @name Students_PATCH
+PATCH {{server}}/odata/v4/student/Students/29243543
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "StudentID": 2924354,
+  "Name": "Name-29243543",
+  "Course": "Course-29243543",
+  "Score": 85
+}
+
+
+### Students
+# @name Students_DELETE
+DELETE {{server}}/odata/v4/student/Students/29243545
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
